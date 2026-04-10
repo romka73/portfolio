@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Портфолио команды веб-разработчиков. Участники, навыки и проекты." />
+  <title>Team Portfolio | Масштабное портфолио команды</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">Portfolio</div>
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#about">О команде</a>
+      <a href="#members">Участники</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero-блок -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Портфолио <span>нашей команды</span></h1>
+      <p>
+        Мы команда из 4 человек. Этот сайт показывает наших участников,
+        навыки и краткую информацию о каждом. Современный подход, чистый код и масштабные решения.
+      </p>
+      <a href="#members" class="btn">Смотреть участников <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+    </div>
+  </section>
+
+  <!-- О команде -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>О команде</h2>
+      <p>
+        Наша команда состоит из четырёх увлечённых специалистов. Мы интересуемся веб-разработкой,
+        дизайном и созданием современных сайтов. Каждый участник вносит уникальный вклад
+        в общую работу — от идеи до финальной реализации. Мы верим, что лучшие продукты рождаются в синергии.
+      </p>
+    </div>
+  </section>
+
+  <!-- Участники (карточки с реальными фото-заглушками от picsum) -->
+  <section class="members" id="members">
+    <div class="container" style="max-width: 100%; padding: 0 0 1rem;">
+      <h2>Наши участники</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="roma.jpg" alt="Сағымбай Рамазан">
+        <h3>Рамазан</h3>
+        <p class="role">Frontend Developer</p>
+        <p>
+          Создаёт интерфейсы, адаптивную вёрстку и оживляет страницы. Любит React и чистый CSS.
+        </p>
+      </div>
+      <div class="card"> 
+        <img src="nariman.jpg" alt="Нариман">
+        <h3>Нариман</h3>
+        <p class="role">Web Designer</p>
+        <p>
+          Отвечает за дизайн, подбор цветов, типографику и удобство. Вдохновляется минимализмом.
+        </p>
+      </div>
+      <div class="card">
+        <img src="talgat.jpg" alt="Талғат">
+        <h3>Талғат</h3>
+        <p class="role">HTML/CSS Developer</p>
+        <p>
+          Строит семантическую структуру, анимации и pixel-perfect вёрстку. Мастер гридов и флексов.
+        </p>
+      </div>
+      <div class="card">
+        <img src="user.jpg" alt="Әбілмансұр">
+        <h3>Әбілмансұр</h3>
+        <p class="role">Project Member</p>
+        <p>
+          Генерирует идеи, управляет задачами и улучшает проект. Следит за качеством и сроками.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты с иконками -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i> teamportfolio@gmail.com
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i> +7 707 684 78 09
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i> @team_portfolio
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>©2026 Team Portfolio</p>
+</footer>
+
+</body>
+</html>

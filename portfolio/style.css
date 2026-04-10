@@ -1,0 +1,347 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+      color: #1e293b;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    /* Контейнер для центрирования контента */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== ШАПКА (sticky + стекло) ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      z-index: 100;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e293b;
+      transition: 0.2s;
+      font-size: 1rem;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+    }
+
+    /* ===== Hero-секция (масштабный фон) ===== */
+    .hero {
+      background: linear-gradient(125deg, #f0f4ff 0%, #e6eeff 100%);
+      padding: 5rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #1e293b, #2563eb);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #334155;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(37, 99, 235, 0.25);
+    }
+
+    /* ===== Секции общие ===== */
+    section {
+      padding: 5rem 0;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+
+    section h2:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      margin: 0.8rem auto 0;
+      border-radius: 4px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #334155;
+      background: white;
+      padding: 2rem;
+      border-radius: 32px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    /* ===== Карточки участников (сетка) ===== */
+    .members {
+      background: #ffffff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      text-align: center;
+      padding-bottom: 1.8rem;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 45px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin: 1rem 0 0.25rem;
+      font-weight: 700;
+    }
+
+    .role {
+      color: #2563eb;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -0.2px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .card p:last-of-type {
+      padding: 0 1.2rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Контакты ===== */
+    .contact {
+      background: linear-gradient(145deg, #f1f5f9, #ffffff);
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: 0.2s;
+      color: #1e293b;
+      text-decoration: none;
+    }
+
+    .contact-item i {
+      font-size: 1.5rem;
+      color: #2563eb;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+      background: #2563eb;
+      color: white;
+    }
+
+    .contact-item:hover i {
+      color: white;
+    }
+
+    /* ===== Футер ===== */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Адаптивность (мобильные) ===== */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      section h2 {
+        font-size: 2rem;
+      }
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .contact-item {
+        width: 80%;
+        justify-content: center;
+      }
+      .cards {
+        padding: 0 16px;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 3rem 0;
+      }
+      .btn {
+        padding: 0.7rem 1.5rem;
+      }
+    }
+
+    /* анимация появления карточек при скролле (лёгкая) */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeUp 0.5s ease backwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.2s; }
